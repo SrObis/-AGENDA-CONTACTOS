@@ -24,11 +24,18 @@
       <!--head-->
       <h2>agenda de contactos</h2>
       <!--formulario-->
-      <div class="formulario-data">
-        <input type="text" class="nombre" placeholder="Nombre" />
-        <input type="text" class="numero" placeholder="Numero" />
-        <input type="text" class="direccion" placeholder="Direccion" />
+      <div class="formulario-data" id="div">
+        <input type="text" id="nombre" class="nombre" placeholder="Nombre" />
+
+        <input type="tel" id="number" class="number" placeholder="Numero" />
+        <input
+          type="email"
+          id="email"
+          class="direccion"
+          placeholder="Direccion"
+        />
         <button class="btn-agregar-tareas">agregar contacto</button>
+        <p class="warnings" id="warnings"></p>
         <!--Listado de tareas-->
         <div class="listado-tareas">
           <!--<div class="tarea">

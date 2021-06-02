@@ -1,6 +1,6 @@
 const guardarContacto = (bd, contacto) => {
     bd.setItem(contacto.id, JSON.stringify(contacto))
-    window.location.href = '/'
+    window.location.href = 'file:///C:/Users/jobis/Desktop/GitHub/-AGENDA-CONTACTOS/index.html'
 }
 
 const cargarContactos = (bd,parentNode) => {
@@ -13,7 +13,7 @@ const cargarContactos = (bd,parentNode) => {
         let contacto = JSON.parse(bd.getItem(clave))
         /*console.log(contacto.id)
         console.log(contacto.nombre)
-        console.log(contacto.numero)
+        console.log(contacto.number)
         console.log(contacto.direccion)*/
         crearContacto(parentNode, contacto, bd)
     }
@@ -23,12 +23,12 @@ const cargarContactos = (bd,parentNode) => {
 const crearContacto = (parentNode, contacto, bd)=>{
     let divContacto = document.createElement('div')
     let nombreContacto = document.createElement('h3')
-    let numeroContacto =  document.createElement('p')
+    let numberContacto =  document.createElement('p')
     let direccionContacto = document.createElement('p')
     let iconoBorrar =  document.createElement('span')
 
     nombreContacto.innerHTML = contacto.nombre
-    numeroContacto.innerHTML = contacto.numero
+    numberContacto.innerHTML = contacto.number
     direccionContacto.innerHTML = contacto.direccion
     iconoBorrar.innerHTML = 'person_remove'
 
@@ -37,11 +37,11 @@ const crearContacto = (parentNode, contacto, bd)=>{
     
     iconoBorrar.onclick= ()=>{
         bd.removeItem(contacto.id)
-        window.location.href = '/'
+        window.location.href = 'file:///C:/Users/jobis/Desktop/GitHub/-AGENDA-CONTACTOS/index.html'
     }
 
     divContacto.appendChild(nombreContacto)
-    divContacto.appendChild(numeroContacto)
+    divContacto.appendChild(numberContacto)
     divContacto.appendChild(direccionContacto)
     divContacto.appendChild(iconoBorrar)
 
