@@ -34,6 +34,11 @@ const crearContacto = (parentNode, contacto, bd)=>{
 
     divContacto.classList.add('tarea')
     iconoBorrar.classList.add('material-icons','icono')
+    
+    iconoBorrar.onclick= ()=>{
+        bd.removeItem(contacto.id)
+        window.location.href = '/'
+    }
 
     divContacto.appendChild(nombreContacto)
     divContacto.appendChild(numeroContacto)
