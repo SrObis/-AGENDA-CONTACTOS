@@ -3,12 +3,14 @@ const guardarContacto = (bd, contacto) => {
     window.location.href = '/'
 }
 
-const cargarContactos = (bd) => {
+const cargarContactos = (bd,parentNode) => {
     let claves = Object.keys(bd)
-    console.log(claves)
+    //console.log(claves)
     for(clave of claves){
         //console.log(clave)
-        let contacto = db.getItem(db.getItem(clave))
+        //console.log(contacto.id)
+        //let contacto = bd.getItem(bd.getItem(clave))
+        let contacto = JSON.parse(bd.getItem(clave))
         /*console.log(contacto.id)
         console.log(contacto.nombre)
         console.log(contacto.numero)
@@ -29,8 +31,9 @@ const crearContacto = (parentNode, contacto, bd)=>{
     numeroContacto.innerHTML = contacto.numero
     direccionContacto.innerHTML = contacto.direccion
     iconoBorrar.innerHTML = 'person_remove'
+
     divContacto.classList.add('tarea')
-    divContacto.classList.add('material-icons','icono')
+    iconoBorrar.classList.add('material-icons','icono')
 
     divContacto.appendChild(nombreContacto)
     divContacto.appendChild(numeroContacto)
@@ -38,6 +41,4 @@ const crearContacto = (parentNode, contacto, bd)=>{
     divContacto.appendChild(iconoBorrar)
 
     parentNode.appendChild(divContacto)
-
-
 }

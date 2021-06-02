@@ -16,6 +16,7 @@ btnAgregarTarea.onclick = () => {
     }
     //console.log(contacto)
     guardarContacto(bd, contacto)
-}
-cargarContactos(bd)
 
+}
+
+cargarContactos(bd,listadoTareas)
