@@ -1,6 +1,6 @@
 const guardarContacto = (bd, contacto) => {
     bd.setItem(contacto.id, JSON.stringify(contacto))
-    window.location.href = '/'
+    window.location.href = 'https://srobis.github.io/AGENDA-CONTACTOS/'
 }
 
 const cargarContactos = (bd,parentNode) => {
@@ -37,7 +37,7 @@ const crearContacto = (parentNode, contacto, bd)=>{
     
     iconoBorrar.onclick= ()=>{
         bd.removeItem(contacto.id)
-        window.location.href = '/'
+        window.location.href = 'https://srobis.github.io/AGENDA-CONTACTOS/'
     }
 
     divContacto.appendChild(nombreContacto)
